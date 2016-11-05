@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<%=image_tag(@podcast.imageurl, style: "width:150px;") %><br/>
+  <strong>Name:</strong>
+  <%= @podcast.name %>
+</p>
+
+<!-- 
+<p>
+  <strong>Rss:</strong>
+  <%= @podcast.rss %>
+</p> -->
+
+<p>
+  <strong>Color:</strong>
+  <%= @podcast.color %>
+</p>
+
+<%= link_to 'Edit', edit_podcast_path(@podcast) %> |
+<%= link_to 'Back', podcasts_path %>|
+<%= link_to 'Test', test_podcast_path(@podcast) %>|
+<%= link_to 'Start', start_podcast_path(@podcast) %>
