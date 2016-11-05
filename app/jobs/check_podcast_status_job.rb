@@ -8,8 +8,8 @@ class CheckPodcastStatusJob < ApplicationJob
 			response = http.head(uri.path)
 		}
 		last_modified = response["last-modified"]
-		modified = DateTime.parse(last_modified.to_s)
-		podcastLastModified = podcast.last_modified.nil? ? DateTime.now() : DateTime.parse(podcast.last_modified.to_s)
+		modified = Date.parse(last_modified.to_s)
+		podcastLastModified = podcast.last_modified.nil? ? Date.today() : Date.parse(podcast.last_modified.to_s)
 		if (podcastLastModified != modified) then
 			 $arduinoSocket.print(podcast.color + '\n')	
 			 podcast.last_modified = last_modified;

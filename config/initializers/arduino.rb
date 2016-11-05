@@ -1,5 +1,5 @@
 #params for serial port
-port_str = "/dev/cu.wchusbserial1d110"  #may be different for you
+port_str = "/dev/ttyUSB0"  #may be different for you
 baud_rate = 9600
 data_bits = 8
 stop_bits = 1
