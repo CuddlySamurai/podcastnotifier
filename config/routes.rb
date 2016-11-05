@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	root "/podcasts"
+	root "podcasts#index"
   resources :podcasts do
   	get 'test', on: :member
   	get 'start', on: :member
